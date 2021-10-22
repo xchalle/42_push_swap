@@ -6,7 +6,7 @@
 /*   By: xchalle <xchalle@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/21 12:31:04 by xchalle           #+#    #+#             */
-/*   Updated: 2021/10/14 13:44:42 by xchalle          ###   ########.fr       */
+/*   Updated: 2021/10/22 16:38:08 by xchalle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ size_t			ft_strlcpy(char *dst, const char *src, size_t size);
 size_t			ft_strlcat(char *dst, const char *src, size_t size);
 char			*ft_strnstr(const char *s1, const char *s2, size_t n);
 int				ft_atoi_modified(const char *str, t_flag *list);
-long long		ft_atoi(const char *str);
+long long		ft_atoi(const char *str, int i, long long d, int c);
 char			*ft_strdup(const char *s1);
 void			*ft_calloc(size_t count, size_t size);
 char			*ft_substr(char const *s, unsigned int start, size_t len);

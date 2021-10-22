@@ -6,7 +6,7 @@
 /*   By: xchalle <xchalle@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/14 13:51:44 by xchalle           #+#    #+#             */
-/*   Updated: 2021/10/18 14:21:43 by xchalle          ###   ########.fr       */
+/*   Updated: 2021/10/22 16:25:25 by xchalle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ void	loop_5(int alen, t_stack *a, t_digit *a_temp)
 	}
 	if (alen >= 3)
 	{
-		while (5 - alen > 0)
+		while (a->len - alen > 0)
 		{	
 			reverse_a(a);
 			alen++;
@@ -91,8 +91,8 @@ void	algo_5(t_stack *a, t_stack *b)
 	if (b->len == 2
 		&& (a->max == b->last->data && a->min != b->first->data))
 		swap_b(b);
-	if (b->first->data == a->min)
-		push_a(a, b);
+/*	if (b->first->data == a->min)
+		push_a(a, b);*/
 	if (b->first->data == a->max)
 	{
 		push_a(a, b);

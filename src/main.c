@@ -6,14 +6,14 @@
 /*   By: xchalle <xchalle@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/14 13:53:38 by xchalle           #+#    #+#             */
-/*   Updated: 2021/10/22 11:01:25 by xchalle          ###   ########.fr       */
+/*   Updated: 2021/10/22 11:47:24 by xchalle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 #include <stdio.h>
 
-static int	g_fail_at = -10000;
+static int	g_fail_at = 100000000;
 
 void	*xmalloc(size_t size)
 {

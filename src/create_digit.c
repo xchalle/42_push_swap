@@ -6,7 +6,7 @@
 /*   By: xchalle <xchalle@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/14 13:52:44 by xchalle           #+#    #+#             */
-/*   Updated: 2021/10/22 11:01:34 by xchalle          ###   ########.fr       */
+/*   Updated: 2021/10/22 16:41:23 by xchalle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	exit_free_struct_tab(t_stack *a, t_stack *b, char **tab)
 	return (0);
 }
 
-int	sorted_arg_tab(t_tab *tab, int i)
+/*int	sorted_arg_tab(t_tab *tab, int i)
 {
 	int	j;
 
@@ -43,7 +43,7 @@ int	sorted_arg_tab(t_tab *tab, int i)
 		}
 	}
 	return (1);
-}
+}*/
 
 int	loop_checking_arg(char **argv, int i)
 {
@@ -72,7 +72,7 @@ int	sorted_arg(char **argv, int i)
 	{
 		if (check_arg(argv, j) == 1)
 			return (2);
-		if (ft_atoi(argv[i]) < ft_atoi(argv[j]))
+		if (ft_atoi(argv[i], 0, 0, 1) < ft_atoi(argv[j], 0, 0, 1))
 		{
 			j++;
 			i++;

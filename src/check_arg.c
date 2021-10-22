@@ -6,7 +6,7 @@
 /*   By: xchalle <xchalle@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/14 13:52:33 by xchalle           #+#    #+#             */
-/*   Updated: 2021/10/22 10:57:41 by xchalle          ###   ########.fr       */
+/*   Updated: 2021/10/22 16:40:03 by xchalle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -129,14 +129,14 @@ int	check_arg(char **argv, int i)
 	j = 0;
 	if (check_atoi(argv, i, o) == 1)
 		return (1);
-	cas = ft_atoi(argv[i]);
+	cas = ft_atoi(argv[i], 0, 0, 1);
 	if (cas > 2147483647 || cas < -2147483648)
 		return (1);
 	if (i != 0)
 	{
 		while (j < i)
 		{
-			if (ft_atoi(argv[j]) == cas)
+			if (ft_atoi(argv[j], 0, 0, 1) == cas)
 				return (1);
 			j++;
 		}

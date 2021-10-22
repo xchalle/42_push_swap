@@ -6,21 +6,14 @@
 /*   By: xchalle <xchalle@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 15:46:08 by xchalle           #+#    #+#             */
-/*   Updated: 2021/10/14 13:45:47 by xchalle          ###   ########.fr       */
+/*   Updated: 2021/10/22 16:45:48 by xchalle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-long long	ft_atoi(const char *str)
+long long	ft_atoi(const char *str, int i, long long d, int c)
 {
-	int			i;
-	int			c;
-	long long	d;
-
-	i = 0;
-	d = 0;
-	c = 1;
 	while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
 	{
 		i++;

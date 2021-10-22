@@ -6,7 +6,7 @@
 /*   By: xchalle <xchalle@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/14 13:52:58 by xchalle           #+#    #+#             */
-/*   Updated: 2021/10/21 18:53:12 by xchalle          ###   ########.fr       */
+/*   Updated: 2021/10/22 16:43:22 by xchalle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,9 +70,9 @@ void	full_stack_a2(t_stack *a, t_stack *b, char **tab)
 	int	i;
 
 	i = 0;
-	a->min = ft_atoi(tab[i]);
-	a->max = ft_atoi(tab[i]);
-	a->first = ft_create_elem(ft_atoi(tab[i]), a);
+	a->min = ft_atoi(tab[i], 0, 0, 1);
+	a->max = ft_atoi(tab[i], 0, 0, 1);
+	a->first = ft_create_elem(ft_atoi(tab[i], 0, 0, 1), a);
 	if (!(a->first))
 		exit (exit_free_struct_tab(a, b, tab));
 	a->last = a->first;
@@ -82,7 +82,7 @@ void	full_stack_a2(t_stack *a, t_stack *b, char **tab)
 	{
 		if (check_arg(tab, i) == 1)
 			exit (exit_free_struct_tab(a, b, tab));
-		a->last->next = ft_create_elem(ft_atoi(tab[i]), a);
+		a->last->next = ft_create_elem(ft_atoi(tab[i], 0, 0, 1), a);
 		if (!(a->last->next))
 			exit (exit_free_struct_tab(a, b, tab));
 		a->last->next->prev = a->last;
